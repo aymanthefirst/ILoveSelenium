@@ -113,11 +113,7 @@ class SeleniumQAToolsForm
 
   def find_command_fields
     @chrome_driver.find_element(:id, COMMANDS).find_elements(:tag_name, "option")
-    # results.each do |v|
-    #   puts v.text
-    # end
-
-  end
+    end
 
   def click_command(command)
     find_command_fields.each do |g|
@@ -143,11 +139,3 @@ class SeleniumQAToolsForm
   end
 
 end
-
-# I know I am not supposed to keep commented out code but i want to ask someone about this tomorrow.
-
-# practice_form = SeleniumQAToolsForm.new
-# practice_form.visit_practice_form
-
-# practice_form.click_command("Navigation Commands")
-# puts practice_form.get_command_value
